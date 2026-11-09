@@ -10,10 +10,9 @@ describe('research website', () => {
     expect(page.get('.survey-panel').text()).toContain('Reasons for not using AI')
     expect(page.get('.survey-panel').text()).not.toContain('Function ratings')
   })
-  it('distinguishes planned recruitment from results and uses a public slide copy', () => {
+  it('links to the study questionnaire and reports the eligible sample', () => {
     const page = mount(HomeView)
-    expect(page.text()).toContain('40–60 responses planned, not collected')
-    expect(page.text()).toContain('No pilot findings')
-    expect(page.find('a[href$="Presentation2Slides_Public.pdf"]').exists()).toBe(true)
+    expect(page.text()).toContain('24 submissions · 21 eligible responses')
+    expect(page.get('a[href="https://v.wjx.cn/vm/hnRj6R1.aspx"]').text()).toContain('WJX')
   })
 })

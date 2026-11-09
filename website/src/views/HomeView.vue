@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import MaterialCard from '../components/MaterialCard.vue'
-import { assetUrl, materials, milestones, project } from '../data/research'
+import { milestones, project } from '../data/research'
 const menuOpen = ref(false)
 const audience = ref<'all' | 'ai' | 'non'>('all')
 const links = [
@@ -9,7 +8,6 @@ const links = [
   { id: 'method', text: 'Method' },
   { id: 'questionnaire', text: 'Questionnaire' },
   { id: 'progress', text: 'Progress' },
-  { id: 'materials', text: 'Materials' },
 ]
 const selectAudience = (value: 'all' | 'ai' | 'non') => {
   audience.value = value
@@ -49,7 +47,7 @@ const selectAudience = (value: 'all' | 'ai' | 'non') => {
         </p>
         <div class="hero-actions">
           <a class="button dark" href="#study">Explore the research <span>↗</span></a
-          ><a class="quiet-link" href="#materials">View materials <span>↓</span></a>
+          ><a class="quiet-link" href="#questionnaire">View questionnaire <span>↓</span></a>
         </div>
         <p class="hero-note">
           A study of real experiences. An evaluation of reported satisfaction.
@@ -89,7 +87,7 @@ const selectAudience = (value: 'all' | 'ai' | 'non') => {
       <div><span>PARTICIPANTS</span><strong>XJTLU final-year students</strong></div>
       <div><span>APPROACH</span><strong>Retrospective survey</strong></div>
       <div>
-        <span>CURRENT STAGE</span><strong><i></i> Research preparation</strong>
+        <span>CURRENT STAGE</span><strong><i></i> Survey analysis</strong>
       </div>
     </div>
     <section id="study" class="section-shell study-section">
@@ -140,8 +138,8 @@ const selectAudience = (value: 'all' | 'ai' | 'non') => {
             <span class="step-no">01</span>
             <h3>Find the participants</h3>
             <p>
-              XJTLU final-year undergraduates aged 18 or above who prepared or revised a CV in the
-              past six months.
+              XJTLU final-year students aged 18 or above who prepared or revised a CV in the past
+              six months.
             </p>
             <div class="method-foot">Convenience sampling + peer referrals</div>
           </article>
@@ -152,7 +150,7 @@ const selectAudience = (value: 'all' | 'ai' | 'non') => {
               Everyone answers the same 1–7 CV satisfaction item. Further questions follow their
               actual AI use in that experience.
             </p>
-            <div class="method-foot">40–60 responses planned, not collected</div>
+            <div class="method-foot">24 submissions · 21 eligible responses</div>
           </article>
           <article>
             <span class="step-no">03</span>
@@ -188,29 +186,15 @@ const selectAudience = (value: 'all' | 'ai' | 'non') => {
         <div>
           <h2>Built around<br /><em>your experience.</em></h2>
           <p>
-            The agreed questionnaire has 14 questions in total. Each respondent sees only the branch
-            relevant to their experience.
+            The questionnaire covers one recent CV preparation experience. Follow-up questions
+            depend on whether the respondent used AI for that CV.
           </p>
-          <div class="notice">
-            <span class="status-dot"></span>
-            <div>
-              <strong>Survey preparation</strong>
-              <p>
-                The online form still needs to be checked against the agreed flow. Recruitment is
-                not announced on this page.
-              </p>
-            </div>
-          </div>
-          <a
-            class="text-link"
-            :href="assetUrl('images/questionnaire-flow.png')"
-            target="_blank"
-            rel="noopener"
-            >Open the complete questionnaire flow ↗</a
+          <a class="button dark" :href="project.questionnaireUrl" target="_blank" rel="noopener"
+            >Open questionnaire on WJX <span>↗</span></a
           >
         </div>
         <div class="survey-preview">
-          <div class="preview-title"><span>QUESTIONNAIRE GUIDE</span><span>14 QUESTIONS</span></div>
+          <div class="preview-title"><span>QUESTIONNAIRE GUIDE</span><span>21 QUESTIONS</span></div>
           <div class="audience-buttons" role="group" aria-label="Questionnaire audience">
             <button
               v-for="option in [
@@ -228,29 +212,29 @@ const selectAudience = (value: 'all' | 'ai' | 'non') => {
           </div>
           <div class="survey-panel" aria-live="polite">
             <template v-if="audience === 'all'"
-              ><p class="overline">SHARED QUESTIONS · 01–07</p>
+              ><p class="overline">SHARED QUESTIONS · 01–09</p>
               <h3>A common starting point</h3>
               <ul>
                 <li>Read the information sheet and give consent</li>
                 <li>Confirm eligibility and application background</li>
-                <li>Report AI use in the most recent experience</li>
                 <li>Rate satisfaction with the CV from 1 to 7</li>
+                <li>Report AI use in the most recent experience</li>
               </ul>
               <p class="branch-note">
-                Unsure or undisclosed AI use: submit after the shared questions.
+                Respondents who prefer not to disclose AI use finish after the shared questions.
               </p></template
             ><template v-else-if="audience === 'ai'"
-              ><p class="overline">AI BRANCH · 10–14</p>
+              ><p class="overline">AI BRANCH · 12–21</p>
               <h3>What was the experience like?</h3>
               <ul>
-                <li>Perceived help and purposes of use</li>
-                <li>Optional benefits or difficulties</li>
-                <li>Inaccurate or unsupported suggestions</li>
+                <li>Purposes of use, tools and perceived help</li>
+                <li>How students handled problematic suggestions</li>
+                <li>Willingness to use AI again</li>
                 <li>Function ratings, with “not used” available</li>
               </ul>
               <p class="branch-note">Rate only functions you actually used.</p></template
             ><template v-else
-              ><p class="overline">NON-AI BRANCH · 08–09</p>
+              ><p class="overline">NON-AI BRANCH · 10–11</p>
               <h3>Understand the choice</h3>
               <ul>
                 <li>Reasons for not using AI in this experience</li>
@@ -268,11 +252,8 @@ const selectAudience = (value: 'all' | 'ai' | 'non') => {
         <span>04 / PROJECT JOURNAL</span><span>Updated {{ project.updated }}</span>
       </div>
       <div class="section-heading">
-        <h2>Research in progress.</h2>
-        <p>
-          A record of what is prepared and what comes next. No pilot findings or analysed survey
-          results are available here yet.
-        </p>
+        <h2>From survey to analysis.</h2>
+        <p>The survey, data collection and analysis stages of the project.</p>
       </div>
       <ol class="timeline">
         <li
@@ -290,23 +271,6 @@ const selectAudience = (value: 'all' | 'ai' | 'non') => {
           </div>
         </li>
       </ol>
-    </section>
-    <section id="materials" class="materials-section">
-      <div class="section-shell">
-        <div class="section-label">
-          <span>05 / OPEN MATERIALS</span><span>Read the design behind the study.</span>
-        </div>
-        <div class="section-heading">
-          <h2>The research, documented.</h2>
-        </div>
-        <div class="materials-grid">
-          <MaterialCard v-for="material in materials" :key="material.path" :material="material" />
-        </div>
-        <p class="privacy-note">
-          Public copies exclude the signed submission cover. Raw survey responses and participant
-          identifiers are not published.
-        </p>
-      </div>
     </section>
   </main>
   <footer class="site-footer section-shell">
