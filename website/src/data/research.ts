@@ -2,7 +2,7 @@ export const project = {
   updated: '9 November 2026',
   question:
     'How does satisfaction with a prepared CV differ between students who used AI and those who did not?',
-  questionnaireUrl: 'https://v.wjx.cn/vm/hnRj6R1.aspx',
+  questionnaireUrl: 'https://v.wjx.cn/vm/myDPKFn.aspx',
   repository: 'https://github.com/jinnnhn/ADS401_GroupD',
 }
 export const milestones = [

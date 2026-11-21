@@ -10,7 +10,7 @@ test('research content, questionnaire interaction and survey link', async ({ pag
   await expect(page.getByRole('heading', { name: 'Understand the choice' })).toBeVisible()
   await expect(page.getByRole('link', { name: /Open questionnaire on WJX/ })).toHaveAttribute(
     'href',
-    'https://v.wjx.cn/vm/hnRj6R1.aspx',
+    'https://v.wjx.cn/vm/myDPKFn.aspx',
   )
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,

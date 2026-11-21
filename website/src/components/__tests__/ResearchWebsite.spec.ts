@@ -13,6 +13,6 @@ describe('research website', () => {
   it('links to the study questionnaire and reports the eligible sample', () => {
     const page = mount(HomeView)
     expect(page.text()).toContain('24 submissions · 21 eligible responses')
-    expect(page.get('a[href="https://v.wjx.cn/vm/hnRj6R1.aspx"]').text()).toContain('WJX')
+    expect(page.get('a[href="https://v.wjx.cn/vm/myDPKFn.aspx"]').text()).toContain('WJX')
   })
 })
