@@ -1,1 +1,329 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=./"><title>ADS401 Group D</title></head><body><p>The project website has moved to <a href="./">the project homepage</a>.</p></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ADS401 Group D research report on AI use and CV satisfaction among final-year XJTLU students.">
+  <title>AI Use and CV Satisfaction | ADS401 Group D</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./report.css">
+  <script src="./report-navigation.js" defer></script>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to report</a>
+<header class="masthead">
+  <div class="wrap mast-inner">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">D.</span> ADS401 Group D</a>
+    <span class="institution">Xi’an Jiaotong-Liverpool University</span>
+  </div>
+</header>
+<main id="main">
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">XJTLU · GROUP D · ADS401</p>
+        <h1>AI Use and CV Satisfaction</h1>
+        <p class="subtitle">A survey of final-year XJTLU students preparing CVs for jobs or postgraduate study.</p>
+        <div class="hero-actions">
+          <a class="result-link" href="#results">View results <span aria-hidden="true">↓</span></a>
+          <a class="questionnaire-link" href="#questionnaire">View questionnaire <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="authors">Ruipeng Cui, Haonan Jin, Weijun Yuan and Shengjie Yue</p>
+      </div>
+      <figure class="hero-visual" aria-labelledby="study-diagram">
+        <div class="visual-top">Study overview</div>
+        <div class="paper">
+          <div class="paper-heading">
+            <span class="paper-icon" aria-hidden="true">CV</span>
+            <span>Most recent CV<small>Job or postgraduate application</small></span>
+            <span class="paper-dot" aria-hidden="true"></span>
+          </div>
+          <div class="paper-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="visual-paths"><span>Used AI <strong>18</strong></span><span>Did not use AI <strong>3</strong></span></div>
+          <div class="join-line" aria-hidden="true"></div>
+          <p class="rating-label">CV satisfaction rating</p>
+          <div class="rating-scale" aria-hidden="true">
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+          </div>
+          <div class="scale-captions"><span>Very dissatisfied</span><span>Very satisfied</span></div>
+        </div>
+        <figcaption class="visual-bottom" id="study-diagram">21 eligible responses. Both groups answered the same 1–7 satisfaction question.</figcaption>
+      </figure>
+    </div>
+  </header>
+  <div class="report-layout">
+    <nav class="contents" aria-label="Report contents">
+
+      <ul id="contents-links">
+        <li><a href="#research-question">Research question</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#methods">Methods</a></li>
+        <li><a href="#questionnaire">Questionnaire</a></li>
+        <li><a href="#analysis">Data preparation and analysis</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#discussion">Discussion</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </nav>
+    <article class="report">
+      <section id="research-question">
+        <div class="wrap section-inner">
+        <h2>Research question</h2>
+        <p>A CV is often the first document an employer or admissions team sees. Students can use generative AI to organise sections, rewrite experience descriptions or tailor a draft to an opportunity. They can also prepare a CV without AI, drawing on their own experience, templates or feedback from other people. For final-year students at XJTLU, both routes are relevant because the same student may be preparing applications for work, further study or both.</p>
+        <blockquote>How does satisfaction with a prepared CV differ between students who used AI and those who did not?</blockquote>
+        <p>We focused on the CV the student ended up with. This puts the outcome in the same terms for both groups, including students who never used an AI tool. The comparison concerns one recalled application document per student. A satisfaction rating captures the student’s judgement of that document. The survey did not independently assess the CV or track application outcomes.</p>
+        </div>
+      </section>
+      <section id="background">
+        <div class="wrap section-inner">
+          <h2>Background and related work</h2>
+          <div class="literature-feature">
+            <h3>AI in job applications</h3>
+            <div>
+              <p>Wiles <em>et al.</em> found that résumé writing assistance increased hiring in an online labour market <a href="#ref-wiles">[1]</a>. Cui <em>et al.</em> found that an AI cover-letter tool helped applicants tailor their letters and increased callbacks <a href="#ref-cui">[2]</a>.</p>
+              <p class="literature-focus">Those studies track how employers respond. Our study asks how satisfied students are with the CV they prepared.</p>
+            </div>
+          </div>
+          <div class="literature-summary">
+            <div class="literature-row">
+              <h3>Student views on AI</h3>
+              <div>
+                <p>Chan and Hu found that students valued AI’s help with writing and learning, while expressing concerns about accuracy and reliance <a href="#ref-chan">[3]</a>. Davis identified perceived usefulness as a factor in technology acceptance <a href="#ref-davis">[4]</a>. A tool can feel useful during preparation even if the student has mixed feelings about the finished CV.</p>
+              </div>
+            </div>
+            <div class="literature-row">
+              <h3>AI-assisted writing</h3>
+              <div>
+                <p>Noy and Zhang found faster completion and higher assessed quality on professional writing tasks <a href="#ref-noy">[5]</a>. Brynjolfsson <em>et al.</em> found productivity gains in customer support that varied with worker experience and skill <a href="#ref-brynjolfsson">[6]</a>.</p>
+                <p>In an argumentative writing experiment, Dhillon <em>et al.</em> observed lower perceived ownership and satisfaction even as greater assistance improved some performance measures <a href="#ref-dhillon">[7]</a>. The <em>CoAuthor</em> study shows how writers can request, accept, reject or edit AI suggestions <a href="#ref-coauthor">[8]</a>. Our yes/no question covers these different ways of using AI.</p>
+              </div>
+            </div>
+          </div>
+          <p class="literature-bridge">Students rated their most recent CV. We compared ratings by reported AI&nbsp;use.</p>
+        </div>
+      </section>
+      <section id="methods">
+        <div class="wrap section-inner">
+        <h2>Methods</h2>
+        <ol class="method-steps" role="list" aria-label="Survey procedure">
+          <li><strong>Confirm eligibility</strong><span>Final-year XJTLU students aged 18 or older who prepared a CV in the past six months.</span></li>
+          <li><strong>Recall one CV</strong><span>Think of the most recent CV prepared for a job or postgraduate application.</span></li>
+          <li><strong>Rate satisfaction</strong><span>Give that CV a satisfaction score from 1 to 7 (Q8).</span></li>
+          <li><strong>Report AI use</strong><span>Say whether AI was used to prepare the same CV (Q9).</span></li>
+        </ol>
+        <p class="reading-width">We grouped respondents by their Q9 answers and compared their Q8 scores.</p>
+        <div class="panel-grid">
+          <div class="panel"><h3>Design and recruitment</h3>
+        <p>We ran a cross-sectional online survey using Wenjuanxing (WJX). We shared the questionnaire through student groups and used convenience recruitment and peer referrals. To be eligible, a respondent had to be at least 18, in the final year of a degree at XJTLU, and have written or substantially revised a CV for a job or postgraduate application within the previous six months. The survey asked about their most recent CV preparation in that period. Data collection took place from 19 October to 17 November 2026.</p>
+        <p>The study planning target was 40–60 responses. The final analysis includes 21 eligible responses, below that target. Each person contributed one satisfaction rating. The two groups formed from students’ reported behaviour during CV preparation. The survey did not assign students to use AI, control which tool they used, or prescribe a writing task.</p>
+            <p>We describe eligibility, recruitment, measurement and potential sources of bias following general reporting guidance for observational studies <a href="#ref-strobe">[9]</a>.</p>
+          </div>
+          <div class="panel"><h3>Measures and survey procedure</h3>
+        <p>After consent and eligibility screening, the survey asked about application goals, field and prior experience preparing CVs (Q5–Q7). Respondents then rated their overall satisfaction with the recalled CV (Q8). The response scale was 1–7, with 1 meaning very dissatisfied, 4 neither satisfied nor dissatisfied, and 7 very satisfied. Asking for satisfaction before asking about AI use reduced the chance that drawing attention to AI would immediately influence the rating.</p>
+        <p>Q9 then asked whether the student had used an AI tool to write or edit that same CV. “Yes” defined the AI-user group and “No” the non-user group. The questionnaire offered further questions according to that answer. Non-users were asked why they did not use AI and about possible future use. AI users were asked about the tools they used, the functions they used and their usefulness, perceived overall help, problematic suggestions and future use. The analysis focuses on the satisfaction question shared by both groups.</p>
+          </div>
+        </div>
+        <div class="ethics-overview">
+          <h3>Ethics</h3>
+          <p>The survey presented study information and asked for consent before eligibility screening. Respondents could leave before submitting. The questionnaire did not ask for a name, student ID or copy of the CV. The course ethics approval reference is <span class="approval">ER-LRR-11000011420261012163300</span>. This public report presents group summaries. Individual responses are handled through the course submission channel.</p>
+        </div>
+        <div class="questionnaire-layout" id="questionnaire">
+          <div class="questionnaire-intro">
+            <h3>Questionnaire</h3>
+            <p>Participants recalled the last CV they prepared for a job or postgraduate application. Their answer about AI use determined which follow-up questions they saw.</p>
+            <a class="result-link" href="https://v.wjx.cn/vm/myDPKFn.aspx">Open questionnaire on WJX <span aria-hidden="true">↗</span></a>
+            <a class="resource-link" href="./documents/participant-information.pdf">Participant information sheet (PDF) <span aria-hidden="true">↗</span></a>
+            <a class="resource-link" href="./documents/informed-consent.pdf">Informed consent form (PDF) <span aria-hidden="true">↗</span></a>
+          </div>
+          <fieldset class="questionnaire-guide" aria-labelledby="questionnaire-path-label">
+            <legend class="guide-option" id="questionnaire-path-label">Choose a questionnaire path</legend>
+            <div class="guide-heading"><h4>Questionnaire guide</h4><span>16 questions</span></div>
+            <input class="guide-option" type="radio" id="guide-everyone" name="questionnaire-path" aria-controls="guide-shared" checked>
+            <input class="guide-option" type="radio" id="guide-ai" name="questionnaire-path" aria-controls="guide-ai-questions">
+            <input class="guide-option" type="radio" id="guide-non" name="questionnaire-path" aria-controls="guide-non-questions">
+            <div class="guide-controls">
+              <label for="guide-everyone">Everyone</label>
+              <label for="guide-ai">AI users</label>
+              <label for="guide-non">Non-users</label>
+            </div>
+            <div class="guide-panels">
+              <section id="guide-shared" class="guide-panel">
+                <h5>Shared questions (Q1–Q9)</h5>
+                <ul>
+                  <li>Read the participant information and give consent.</li>
+                  <li>Confirm eligibility and report application background.</li>
+                  <li>Rate satisfaction with the CV from 1 to 7 (Q8).</li>
+                  <li>Report whether AI was used for that CV (Q9).</li>
+                </ul>
+              </section>
+              <section id="guide-ai-questions" class="guide-panel">
+                <h5>Questions for AI users (Q12–Q16)</h5>
+                <ul>
+                  <li>Identify the tools used (Q12).</li>
+                  <li>Rate the usefulness of functions used (Q13) and overall help (Q14).</li>
+                  <li>Report any problematic suggestions (Q15) and likelihood of using AI again (Q16).</li>
+                </ul>
+              </section>
+              <section id="guide-non-questions" class="guide-panel">
+                <h5>Questions for non-users (Q10–Q11)</h5>
+                <ul>
+                  <li>Give reasons for preparing the CV without AI (Q10).</li>
+                  <li>Rate the likelihood of using AI for a CV in the next 12 months (Q11).</li>
+                </ul>
+              </section>
+            </div>
+          </fieldset>
+        </div>
+        </div>
+      </section>
+      <section id="analysis">
+        <div class="wrap section-inner">
+        <h2>Data preparation and analysis</h2>
+        <ol class="analysis-steps" role="list">
+          <li>
+            <h3>Select eligible responses</h3>
+            <div>
+              <p class="analysis-lead">The analysis includes 21 eligible responses with a valid Q8 score.</p>
+              <p>The analysis uses the 21 records that met the consent and eligibility criteria and had a valid Q8 rating. The analysis file encodes the Q9 yes/no responses as two groups and stores Q8 as an ordered numeric score. All 21 included records had a valid satisfaction score, so no values were imputed. The application and prior-experience responses describe the sample. The routing questions served different purposes within each group and were outside the main comparison.</p>
+            </div>
+          </li>
+          <li>
+            <h3>Compare satisfaction by AI use</h3>
+            <div>
+              <p class="analysis-lead">Q9 defines the groups. Q8 supplies the scores for the Mann–Whitney U test.</p>
+              <p>We summarised Q8 using counts at each score, medians and quartiles. The scores have a natural order, while the difference between adjacent scores may not mean the same thing to every respondent. We therefore used a two-sided Mann–Whitney U test on two independent groups <a href="#ref-mann">[10]</a>. The test compares the relative ordering of the scores. Reading it as a direct test of medians would need additional assumptions about the shapes of the distributions.</p>
+            </div>
+          </li>
+          <li>
+            <h3>Interpret the test and effect size</h3>
+            <div>
+              <p class="analysis-lead">We report the two-sided p-value, a rank-based effect size and an interval for the median difference.</p>
+              <p>We tested at α = .05. The null hypothesis was that the two groups had the same satisfaction distribution. The analysis ranked the pooled scores and used average ranks for ties. The primary p-value was the two-sided, tie-corrected normal approximation with continuity correction. We retained the exact-method value from the analysis output for comparison. The analysis used Python and SciPy <a href="#ref-scipy">[11]</a>. SciPy’s exact method does not adjust its reference distribution for tied scores, which occur often in these data.</p>
+              <p>We used the rank-biserial correlation to describe the direction and size of the difference in ranks <a href="#ref-kerby">[12]</a>. In the convention used here, positive values favour non-users. We also report a percentile bootstrap interval for the difference in sample medians (AI users minus non-users), using 20,000 resamples within groups. The interval describes uncertainty in the median difference. We used one inferential comparison, so no adjustment for multiple tests was applied.</p>
+            </div>
+          </li>
+        </ol>
+        </div>
+      </section>
+      <section id="results">
+        <div class="wrap section-inner">
+        <h2>Results</h2>
+        <div class="result-cards" aria-label="Median CV satisfaction">
+          <div><span>AI users · n = 18</span><strong>5.0 <small>/ 7</small></strong><span>Median satisfaction</span></div>
+          <div><span>Non-users · n = 3</span><strong>6.0 <small>/ 7</small></strong><span>Median satisfaction</span></div>
+        </div>
+        <p class="result-summary">We found no statistically significant difference in CV satisfaction (Mann–Whitney U = 17.5, two-sided p = .345). With only three non-users, the difference remains uncertain.</p>
+        <div class="panel results-overview">
+          <h3>CV satisfaction scores</h3>
+        <figure>
+          <img src="./q8-distribution.svg" width="640" height="310" alt="Grouped chart of satisfaction scores. AI-user counts for scores 1 through 7 are 1, 0, 1, 4, 5, 6 and 1. Non-user counts are 0, 0, 0, 0, 1, 2 and 0.">
+          <figcaption><strong>Figure 1.</strong> Number of respondents at each Q8 satisfaction score. AI users (n = 18), non-users (n = 3).</figcaption>
+        </figure>
+          <p>Eleven of the 18 AI users rated their CV 5 or 6. The three non-users gave one score of 5 and two scores of 6.</p>
+          <details class="report-disclosure score-details">
+            <summary><span class="disclosure-open">View score counts</span><span class="disclosure-close">Hide score counts</span></summary>
+            <table>
+              <caption>Number of respondents by satisfaction score</caption>
+              <thead><tr><th scope="col">Score</th><th scope="col">AI users (n = 18)</th><th scope="col">Non-users (n = 3)</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">1</th><td>1</td><td>0</td></tr>
+                <tr><th scope="row">2</th><td>0</td><td>0</td></tr>
+                <tr><th scope="row">3</th><td>1</td><td>0</td></tr>
+                <tr><th scope="row">4</th><td>4</td><td>0</td></tr>
+                <tr><th scope="row">5</th><td>5</td><td>1</td></tr>
+                <tr><th scope="row">6</th><td>6</td><td>2</td></tr>
+                <tr><th scope="row">7</th><td>1</td><td>0</td></tr>
+              </tbody>
+            </table>
+          </details>
+        </div>
+        <figure class="results-figure">
+          <h3>Median difference and uncertainty</h3>
+          <img src="./median-difference.svg" width="480" height="166" alt="The median difference, AI users minus non-users, is minus 1 point. The 95% bootstrap confidence interval runs from minus 2 to plus 1 and includes zero.">
+          <figcaption><strong>Figure 2.</strong> The observed difference was −1 point (AI users minus non-users). The 95% bootstrap confidence interval [−2, 1] crosses zero.</figcaption>
+        </figure>
+        <details class="report-disclosure statistical-details">
+          <summary><span class="disclosure-open">Statistical details</span><span class="disclosure-close">Hide statistical details</span></summary>
+        <table>
+          <caption>Table 1. CV satisfaction by group</caption>
+          <thead><tr><th scope="col">Group</th><th scope="col">n</th><th scope="col">Median</th><th scope="col">Q1–Q3</th><th scope="col">Range</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">AI users</th><td>18</td><td>5.0</td><td>4–6</td><td>1–7</td></tr>
+            <tr><th scope="row">Non-users</th><td>3</td><td>6.0</td><td>5–6</td><td>5–6</td></tr>
+          </tbody>
+        </table>
+        <h3>Mann–Whitney U test</h3>
+        <p>The mean ranks were 10.47 for AI users and 14.17 for non-users. The two-sided Mann–Whitney U test gave U = 17.5 and an asymptotic p-value of .345. At the stated threshold, the sample does not give clear statistical evidence of a difference. The observed median difference was −1 point, with a 95% bootstrap interval of [−2, 1] points. Differences in either direction remain compatible with that interval.</p>
+        <table>
+          <caption>Table 2. Main comparison and uncertainty</caption>
+          <thead><tr><th scope="col">Statistic</th><th scope="col">Result</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Mann–Whitney U (AI group)</th><td>17.5</td></tr>
+            <tr><th scope="row">Two-sided asymptotic p (primary)</th><td>.345</td></tr>
+            <tr><th scope="row">Two-sided exact-method p (as in the analysis output)</th><td>.412</td></tr>
+            <tr><th scope="row">Rank-biserial r (positive favours non-users)</th><td>+.35</td></tr>
+            <tr><th scope="row">Median difference (AI users minus non-users)</th><td>−1 point</td></tr>
+            <tr><th scope="row">95% bootstrap CI for median difference</th><td>[−2, 1] points</td></tr>
+          </tbody>
+        </table>
+        </details>
+        <h3>Sample</h3>
+        <figure class="results-figure sample-figure">
+          <img src="./application-goals.svg" width="480" height="218" alt="Application goals among 21 respondents: postgraduate study, 8; both job hunting and postgraduate study, 8; job hunting, 4; not sure, 1.">
+          <figcaption><strong>Figure 3.</strong> Application goals of the 21 respondents.</figcaption>
+        </figure>
+        <p>Ten respondents reported preparing one or two previous CVs, and eight reported preparing three or more. Three preferred not to answer.</p>
+        </div>
+      </section>
+      <section id="discussion">
+        <div class="wrap section-inner">
+        <h2>Discussion</h2>
+        <p>In this sample, non-users gave somewhat higher ratings, but their group was very small. One response occupies a third of that group and can have a large influence on its median and ranks. The sensible reading is that the survey leaves the direction and size of the difference uncertain. Students in both groups rated their CVs above the neutral point at the median, while the AI users’ answers covered a wider range.</p>
+        <p>There are several ways the observed pattern could arise. Students who expect a difficult application might turn to AI more often and judge the finished CV against a different standard. A student with more experience might choose to work independently and feel more confident about the result. AI use also covered a range of tools and tasks, from editing sentences to generating material. The grouping combines these uses, so the comparison cannot isolate the contribution of any particular tool or feature.</p>
+        <div class="panel-grid">
+          <div class="panel"><h3>Limitations</h3>
+        <p>Recruitment through student networks means the observed share of AI users describes this sample. It does not estimate AI adoption among all XJTLU students. The sample was smaller than planned and had only three non-users. That limits precision and makes it hard to assess whether the two groups have similarly shaped distributions. The two-sided test gives evidence about the observed ratings under its assumptions, while the small sample limits what can be inferred beyond those ratings.</p>
+        <p>We also relied on memory and a single overall rating. Students may remember a recent revision or the role of AI differently, and they may use the scale in different ways. The study did not collect CV quality scores or application decisions, so those outcomes would need separate measures. Students chose whether to use AI, and the study did not control for application goals, prior writing experience or deadlines. Any group difference would therefore remain observational.</p>
+          </div>
+          <div class="panel"><h3>Implications and future work</h3>
+        <p>For CV guidance, the result supports keeping the focus on what the student has written and can substantiate. A practical activity would be to ask students to check whether an edited bullet accurately represents their role and evidence, and whether the final wording fits the position. The same review can be applied to drafts with or without AI. This is a suggestion for advising, rather than an outcome tested in this survey.</p>
+            <p>In a survey of knowledge workers, Lee <em>et al.</em> identified verification as part of the work of using AI outputs <a href="#ref-critical">[13]</a>. In an AI-assisted decision experiment, Buçinca <em>et al.</em> found that prompts to think independently could reduce overreliance <a href="#ref-bucinca">[14]</a>. Amershi <em>et al.</em> also recommend making it easy for users to dismiss or correct AI output <a href="#ref-amershi">[15]</a>. In CV advising, one practical application is to review any suggested achievement, date or figure against the applicant’s own records before keeping it.</p>
+        <p>For a follow-up comparison, recruiting more non-users would provide a better basis for estimating differences. A study could also distinguish specific types of assistance, such as language editing and drafting, record the application context, and collect independent ratings of CV quality. A planned comparison of comparable tasks with randomised access to assistance would address a different question about causal effects. Satisfaction and independent quality ratings could then be reported side by side.</p>
+          </div>
+        </div>
+        </div>
+      </section>
+      <section id="references">
+        <div class="wrap section-inner">
+        <h2>Transparency and references</h2>
+        <p>The questionnaire and participant materials are linked in the methods section. The website files are available in the <a href="https://github.com/jinnnhn/ADS401_GroupD">Group D repository</a>. The aggregate figure is based on the response-frequency table for the analysed sample.</p>
+        <ol class="references">
+          <li id="ref-wiles">E. Wiles, Z. T. Munyikwa, and J. J. Horton, “Algorithmic writing assistance on jobseekers’ resumes increases hires,” National Bureau of Economic Research, Working Paper 30886, 2023. <a href="https://doi.org/10.3386/w30886">doi:10.3386/w30886</a>.</li>
+          <li id="ref-cui">J. Cui, G. Dias, and J. Ye, “Signaling in the age of AI: Evidence from cover letters,” arXiv:2509.25054, ver. 3, 2026. <a href="https://arxiv.org/abs/2509.25054v3">arXiv:2509.25054v3</a>.</li>
+          <li id="ref-chan">C. K. Y. Chan and W. Hu, “Students’ voices on generative AI: Perceptions, benefits, and challenges in higher education,” <cite>Int. J. Educ. Technol. High. Educ.</cite>, vol. 20, art. 43, 2023. <a href="https://doi.org/10.1186/s41239-023-00411-8">doi:10.1186/s41239-023-00411-8</a>.</li>
+          <li id="ref-davis">F. D. Davis, “Perceived usefulness, perceived ease of use, and user acceptance of information technology,” <cite>MIS Quart.</cite>, vol. 13, no. 3, pp. 319–340, 1989. <a href="https://doi.org/10.2307/249008">doi:10.2307/249008</a>.</li>
+          <li id="ref-noy">S. Noy and W. Zhang, “Experimental evidence on the productivity effects of generative artificial intelligence,” <cite>Science</cite>, vol. 381, no. 6654, pp. 187–192, 2023. <a href="https://doi.org/10.1126/science.adh2586">doi:10.1126/science.adh2586</a>.</li>
+        </ol>
+        <details class="report-disclosure reference-details">
+          <summary><span class="disclosure-open">Show all 15 references</span><span class="disclosure-close">Show fewer references</span></summary>
+          <ol class="references" start="6">
+            <li id="ref-brynjolfsson">E. Brynjolfsson, D. Li, and L. R. Raymond, “Generative AI at work,” <cite>Quart. J. Econ.</cite>, vol. 140, no. 2, pp. 889–942, 2025. <a href="https://doi.org/10.1093/qje/qjae044">doi:10.1093/qje/qjae044</a>.</li>
+            <li id="ref-dhillon">P. S. Dhillon, S. Molaei, J. Li, M. Golub, S. Zheng, and L. P. Robert, “Shaping human-AI collaboration: Varied scaffolding levels in co-writing with language models,” in <cite>Proc. CHI Conf. Human Factors Comput. Syst.</cite>, 2024. <a href="https://doi.org/10.1145/3613904.3642134">doi:10.1145/3613904.3642134</a>.</li>
+            <li id="ref-coauthor">M. Lee, P. Liang, and Q. Yang, “CoAuthor: Designing a human-AI collaborative writing dataset for exploring language model capabilities,” in <cite>Proc. CHI Conf. Human Factors Comput. Syst.</cite>, 2022. <a href="https://doi.org/10.1145/3491102.3502030">doi:10.1145/3491102.3502030</a>.</li>
+            <li id="ref-strobe">E. von Elm <em>et al.</em>, “The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement: Guidelines for reporting observational studies,” <cite>PLoS Med.</cite>, vol. 4, no. 10, art. e296, 2007. <a href="https://doi.org/10.1371/journal.pmed.0040296">doi:10.1371/journal.pmed.0040296</a>.</li>
+            <li id="ref-mann">H. B. Mann and D. R. Whitney, “On a test of whether one of two random variables is stochastically larger than the other,” <cite>Ann. Math. Stat.</cite>, vol. 18, no. 1, pp. 50–60, 1947. <a href="https://doi.org/10.1214/aoms/1177730491">doi:10.1214/aoms/1177730491</a>.</li>
+            <li id="ref-scipy">SciPy, “mannwhitneyu,” <cite>SciPy Reference Guide</cite>. <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html">Online documentation</a>.</li>
+            <li id="ref-kerby">D. S. Kerby, “The simple difference formula: An approach to teaching nonparametric correlation,” <cite>Compr. Psychol.</cite>, vol. 3, 2014. <a href="https://doi.org/10.2466/11.IT.3.1">doi:10.2466/11.IT.3.1</a>.</li>
+            <li id="ref-critical">H.-P. Lee <em>et al.</em>, “The impact of generative AI on critical thinking: Self-reported reductions in cognitive effort and confidence effects from a survey of knowledge workers,” in <cite>Proc. CHI Conf. Human Factors Comput. Syst.</cite>, 2025. <a href="https://doi.org/10.1145/3706598.3713778">doi:10.1145/3706598.3713778</a>.</li>
+            <li id="ref-bucinca">Z. Buçinca, M. B. Malaya, and K. Z. Gajos, “To trust or to think: Cognitive forcing functions can reduce overreliance on AI in AI-assisted decision-making,” <cite>Proc. ACM Hum.-Comput. Interact.</cite>, vol. 5, no. CSCW1, art. 188, 2021. <a href="https://doi.org/10.1145/3449287">doi:10.1145/3449287</a>.</li>
+            <li id="ref-amershi">S. Amershi <em>et al.</em>, “Guidelines for human-AI interaction,” in <cite>Proc. CHI Conf. Human Factors Comput. Syst.</cite>, 2019. <a href="https://doi.org/10.1145/3290605.3300233">doi:10.1145/3290605.3300233</a>.</li>
+          </ol>
+        </details>
+        </div>
+      </section>
+    </article>
+  </div>
+</main>
+<footer class="wrap footer"><span>ADS401 · Group D</span><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
