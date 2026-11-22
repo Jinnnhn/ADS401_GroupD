@@ -505,3 +505,67 @@ tbody th { font-weight: 550; }
 @media (max-width: 420px) {
   .results-figure { padding: 10px; }
 }
+
+.hero {
+  background: linear-gradient(110deg, #faf9f6 58%, #eef0e7);
+}
+.hero-grid > div:first-child { min-width: 0; }
+.hero h1 { max-width: 16ch; text-wrap: balance; line-height: 1.04; }
+.hero .subtitle { max-width: 31ch; text-wrap: pretty; }
+.hero .authors { max-width: 49ch; text-wrap: pretty; }
+.hero-visual {
+  border-color: #d5dbd0;
+  box-shadow: 0 12px 26px rgb(32 47 53 / 7%);
+}
+#results .result-cards > div {
+  padding: clamp(14px, 2.5vw, 26px);
+  border-top: 3px solid var(--teal);
+}
+#results .result-cards > div + div { border-top-color: var(--accent); }
+#results .result-cards strong { font-size: clamp(2rem, 4vw, 3rem); }
+#results .result-summary {
+  margin-top: 18px;
+  padding: 10px 14px;
+  background: #fffefa;
+  text-wrap: pretty;
+}
+.evidence-grid, .sample-layout {
+  display: grid;
+  align-items: start;
+  gap: clamp(14px, 2vw, 24px);
+  margin-top: 22px;
+}
+.evidence-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.evidence-grid .results-overview, .evidence-grid .results-figure, .sample-layout .sample-figure {
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: clamp(12px, 1.8vw, 22px);
+}
+.evidence-grid .results-overview figure { margin: 14px 0; }
+.evidence-grid .results-overview img { border: 0; }
+.evidence-grid figcaption, .sample-layout figcaption { text-wrap: pretty; }
+.sample-layout {
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  grid-template-areas: "title chart" "description chart";
+  grid-template-rows: auto 1fr;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+.sample-layout h3 { grid-area: title; margin: 0; }
+.sample-layout > p { grid-area: description; margin: 0; max-width: 46ch; }
+.sample-layout .sample-figure { grid-area: chart; width: 100%; max-width: 620px; }
+@media (max-width: 900px) {
+  .evidence-grid, .sample-layout { grid-template-columns: minmax(0, 1fr); }
+  .sample-layout { grid-template-areas: "title" "chart" "description"; grid-template-rows: auto; }
+  .evidence-grid .results-figure { max-width: 620px; }
+}
+@media (max-width: 760px) {
+  .hero { background: #faf9f6; }
+  .hero h1 { text-wrap: wrap; }
+}
+@media print {
+  .hero { background: none; }
+  .evidence-grid, .sample-layout { display: block; }
+  .evidence-grid .results-figure, .sample-layout .sample-figure { margin-top: 14px; }
+}

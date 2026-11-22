@@ -213,35 +213,37 @@
           <div><span>Non-users · n = 3</span><strong>6.0 <small>/ 7</small></strong><span>Median satisfaction</span></div>
         </div>
         <p class="result-summary">We found no statistically significant difference in CV satisfaction (Mann–Whitney U = 17.5, two-sided p = .345). With only three non-users, the difference remains uncertain.</p>
-        <div class="panel results-overview">
-          <h3>CV satisfaction scores</h3>
-        <figure>
-          <img src="./q8-distribution.svg" width="640" height="310" alt="Grouped chart of satisfaction scores. AI-user counts for scores 1 through 7 are 1, 0, 1, 4, 5, 6 and 1. Non-user counts are 0, 0, 0, 0, 1, 2 and 0.">
-          <figcaption><strong>Figure 1.</strong> Number of respondents at each Q8 satisfaction score. AI users (n = 18), non-users (n = 3).</figcaption>
-        </figure>
-          <p>Eleven of the 18 AI users rated their CV 5 or 6. The three non-users gave one score of 5 and two scores of 6.</p>
-          <details class="report-disclosure score-details">
-            <summary><span class="disclosure-open">View score counts</span><span class="disclosure-close">Hide score counts</span></summary>
-            <table>
-              <caption>Number of respondents by satisfaction score</caption>
-              <thead><tr><th scope="col">Score</th><th scope="col">AI users (n = 18)</th><th scope="col">Non-users (n = 3)</th></tr></thead>
-              <tbody>
-                <tr><th scope="row">1</th><td>1</td><td>0</td></tr>
-                <tr><th scope="row">2</th><td>0</td><td>0</td></tr>
-                <tr><th scope="row">3</th><td>1</td><td>0</td></tr>
-                <tr><th scope="row">4</th><td>4</td><td>0</td></tr>
-                <tr><th scope="row">5</th><td>5</td><td>1</td></tr>
-                <tr><th scope="row">6</th><td>6</td><td>2</td></tr>
-                <tr><th scope="row">7</th><td>1</td><td>0</td></tr>
-              </tbody>
-            </table>
-          </details>
+        <div class="evidence-grid">
+          <div class="panel results-overview">
+            <h3>CV satisfaction scores</h3>
+          <figure>
+            <img src="./q8-distribution.svg" width="640" height="310" alt="Grouped chart of satisfaction scores. AI-user counts for scores 1 through 7 are 1, 0, 1, 4, 5, 6 and 1. Non-user counts are 0, 0, 0, 0, 1, 2 and 0.">
+            <figcaption><strong>Figure 1.</strong> Number of respondents at each Q8 satisfaction score. AI users (n = 18), non-users (n = 3).</figcaption>
+          </figure>
+            <p>Eleven of the 18 AI users rated their CV 5 or 6. The three non-users gave one score of 5 and two scores of 6.</p>
+            <details class="report-disclosure score-details">
+              <summary><span class="disclosure-open">View score counts</span><span class="disclosure-close">Hide score counts</span></summary>
+              <table>
+                <caption>Number of respondents by satisfaction score</caption>
+                <thead><tr><th scope="col">Score</th><th scope="col">AI users (n = 18)</th><th scope="col">Non-users (n = 3)</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">1</th><td>1</td><td>0</td></tr>
+                  <tr><th scope="row">2</th><td>0</td><td>0</td></tr>
+                  <tr><th scope="row">3</th><td>1</td><td>0</td></tr>
+                  <tr><th scope="row">4</th><td>4</td><td>0</td></tr>
+                  <tr><th scope="row">5</th><td>5</td><td>1</td></tr>
+                  <tr><th scope="row">6</th><td>6</td><td>2</td></tr>
+                  <tr><th scope="row">7</th><td>1</td><td>0</td></tr>
+                </tbody>
+              </table>
+            </details>
+          </div>
+          <figure class="results-figure">
+            <h3>Median difference and uncertainty</h3>
+            <img src="./median-difference.svg" width="480" height="166" alt="The median difference, AI users minus non-users, is minus 1 point. The 95% bootstrap confidence interval runs from minus 2 to plus 1 and includes zero.">
+            <figcaption><strong>Figure 2.</strong> The observed difference was −1 point (AI users minus non-users). The 95% bootstrap confidence interval [−2, 1] crosses zero.</figcaption>
+          </figure>
         </div>
-        <figure class="results-figure">
-          <h3>Median difference and uncertainty</h3>
-          <img src="./median-difference.svg" width="480" height="166" alt="The median difference, AI users minus non-users, is minus 1 point. The 95% bootstrap confidence interval runs from minus 2 to plus 1 and includes zero.">
-          <figcaption><strong>Figure 2.</strong> The observed difference was −1 point (AI users minus non-users). The 95% bootstrap confidence interval [−2, 1] crosses zero.</figcaption>
-        </figure>
         <details class="report-disclosure statistical-details">
           <summary><span class="disclosure-open">Statistical details</span><span class="disclosure-close">Hide statistical details</span></summary>
         <table>
@@ -267,12 +269,14 @@
           </tbody>
         </table>
         </details>
-        <h3>Sample</h3>
-        <figure class="results-figure sample-figure">
-          <img src="./application-goals.svg" width="480" height="218" alt="Application goals among 21 respondents: postgraduate study, 8; both job hunting and postgraduate study, 8; job hunting, 4; not sure, 1.">
-          <figcaption><strong>Figure 3.</strong> Application goals of the 21 respondents.</figcaption>
-        </figure>
-        <p>Ten respondents reported preparing one or two previous CVs, and eight reported preparing three or more. Three preferred not to answer.</p>
+        <div class="sample-layout">
+          <h3>Sample</h3>
+          <figure class="results-figure sample-figure">
+            <img src="./application-goals.svg" width="480" height="218" alt="Application goals among 21 respondents: postgraduate study, 8; both job hunting and postgraduate study, 8; job hunting, 4; not sure, 1.">
+            <figcaption><strong>Figure 3.</strong> Application goals of the 21 respondents.</figcaption>
+          </figure>
+          <p>Ten respondents reported preparing one or two previous CVs, and eight reported preparing three or more. Three preferred not to answer.</p>
+        </div>
         </div>
       </section>
       <section id="discussion">
