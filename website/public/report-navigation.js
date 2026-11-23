@@ -59,8 +59,13 @@ if (contents && list) {
   }
 
   window.addEventListener('scroll', scheduleUpdate, { passive: true })
-  window.addEventListener('resize', scheduleUpdate)
+  function updateLayout() {
+    document.documentElement.style.setProperty('--contents-bar-height', contents.offsetHeight + 'px')
+    scheduleUpdate()
+  }
+
+  window.addEventListener('resize', updateLayout)
   window.addEventListener('hashchange', scheduleUpdate)
-  window.addEventListener('load', scheduleUpdate)
-  scheduleUpdate()
+  window.addEventListener('load', updateLayout)
+  updateLayout()
 }

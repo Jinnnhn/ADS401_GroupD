@@ -277,7 +277,7 @@ tbody th { font-weight: 550; }
 .contents a { padding: 13px 0; color: var(--ink); }
 .report section, .report section + section { padding: clamp(30px, 5vw, 65px) 0; }
 .report section:nth-child(even) { background: #f0f1e9; }
-.report section:target, #questionnaire:target, .references li:target { scroll-margin-top: 85px; }
+.report section:target, :is(#questionnaire, #recommendations, #conclusion):target, .references li:target { scroll-margin-top: calc(var(--contents-bar-height, 61px) + 24px); }
 .report h2 + p, .reading-width, .report blockquote { max-width: 76ch; }
 .report blockquote { font-size: clamp(1.25rem, 2.7vw, 1.85rem); }
 .panel-grid {
@@ -302,7 +302,7 @@ tbody th { font-weight: 550; }
 #discussion > .section-inner > p { max-width: 76ch; }
 @media (max-width: 900px) {
   .contents { position: static; }
-  .report section:target, #questionnaire:target, .references li:target { scroll-margin-top: 18px; }
+  .report section:target, :is(#questionnaire, #recommendations, #conclusion):target, .references li:target { scroll-margin-top: 18px; }
   .panel-grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 760px) {
@@ -378,7 +378,7 @@ tbody th { font-weight: 550; }
   .contents-toggle[aria-expanded='false'] + ul { display: none; }
   .contents-enhanced ul { max-height: 50vh; overflow: auto; padding-block: 7px; }
   .contents-enhanced a { padding-block: 8px; }
-  .report section:target, #questionnaire:target, .references li:target { scroll-margin-top: 64px; }
+  .report section:target, :is(#questionnaire, #recommendations, #conclusion):target, .references li:target { scroll-margin-top: 64px; }
 }
 
 
