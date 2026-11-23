@@ -71,9 +71,11 @@
       <section id="research-question">
         <div class="wrap section-inner">
         <h2>Research question</h2>
-        <p>A CV is often the first document an employer or admissions team sees. Students can use generative AI to organise sections, rewrite experience descriptions or tailor a draft to an opportunity. They can also prepare a CV without AI, drawing on their own experience, templates or feedback from other people. For final-year students at XJTLU, both routes are relevant because the same student may be preparing applications for work, further study or both.</p>
-        <blockquote>How does satisfaction with a prepared CV differ between students who used AI and those who did not?</blockquote>
-        <p>We focused on the CV the student ended up with. This puts the outcome in the same terms for both groups, including students who never used an AI tool. The comparison concerns one recalled application document per student. A satisfaction rating captures the student’s judgement of that document. The survey did not independently assess the CV or track application outcomes.</p>
+        <div class="reading-columns research-intro">
+          <div><p>A CV is often the first document an employer or admissions team sees. Students can use generative AI to organise sections, rewrite experience descriptions or tailor a draft to an opportunity. They can also prepare a CV without AI, drawing on their own experience, templates or feedback from other people. For final-year students at XJTLU, both routes are relevant because the same student may be preparing applications for work, further study or both.</p></div>
+          <div><blockquote>How does satisfaction with a prepared CV differ between students who used AI and those who did not?</blockquote>
+            <p>We focused on the CV the student ended up with. This puts the outcome in the same terms for both groups, including students who never used an AI tool. The comparison concerns one recalled application document per student. A satisfaction rating captures the student’s judgement of that document. The survey did not independently assess the CV or track application outcomes.</p></div>
+        </div>
         </div>
       </section>
       <section id="background">
@@ -222,9 +224,17 @@
             <img src="./q8-distribution.svg" width="640" height="310" alt="Grouped chart of satisfaction scores. AI-user counts for scores 1 through 7 are 1, 0, 1, 4, 5, 6 and 1. Non-user counts are 0, 0, 0, 0, 1, 2 and 0.">
             <figcaption><strong>Figure 1.</strong> Number of respondents at each Q8 satisfaction score. AI users (n = 18), non-users (n = 3).</figcaption>
           </figure>
-            <p>Eleven of the 18 AI users rated their CV 5 or 6. The three non-users gave one score of 5 and two scores of 6.</p>
-            <details class="report-disclosure score-details">
-              <summary><span class="disclosure-open">View score counts</span><span class="disclosure-close">Hide score counts</span></summary>
+          </div>
+          <figure class="results-figure">
+            <h3>Median difference and uncertainty</h3>
+            <img src="./median-difference.svg" width="480" height="166" alt="The median difference, AI users minus non-users, is minus 1 point. The 95% bootstrap confidence interval runs from minus 2 to plus 1 and includes zero.">
+            <figcaption><strong>Figure 2.</strong> The observed difference was −1 point (AI users minus non-users). The 95% bootstrap confidence interval [−2, 1] crosses zero.</figcaption>
+          </figure>
+        </div>
+        <div class="statistical-details">
+          <h3>Statistical details</h3>
+          <div class="stats-table-grid">
+            <div class="panel score-details">
               <table>
                 <caption>Number of respondents by satisfaction score</caption>
                 <thead><tr><th scope="col">Score</th><th scope="col">AI users (n = 18)</th><th scope="col">Non-users (n = 3)</th></tr></thead>
@@ -238,17 +248,10 @@
                   <tr><th scope="row">7</th><td>1</td><td>0</td></tr>
                 </tbody>
               </table>
-            </details>
-          </div>
-          <figure class="results-figure">
-            <h3>Median difference and uncertainty</h3>
-            <img src="./median-difference.svg" width="480" height="166" alt="The median difference, AI users minus non-users, is minus 1 point. The 95% bootstrap confidence interval runs from minus 2 to plus 1 and includes zero.">
-            <figcaption><strong>Figure 2.</strong> The observed difference was −1 point (AI users minus non-users). The 95% bootstrap confidence interval [−2, 1] crosses zero.</figcaption>
-          </figure>
-        </div>
-        <details class="report-disclosure statistical-details">
-          <summary><span class="disclosure-open">Statistical details</span><span class="disclosure-close">Hide statistical details</span></summary>
-        <table>
+            <p>Eleven of the 18 AI users rated their CV 5 or 6. The three non-users gave one score of 5 and two scores of 6.</p>
+            </div>
+            <div class="panel group-details">
+              <table>
           <caption>Table 1. CV satisfaction by group</caption>
           <thead><tr><th scope="col">Group</th><th scope="col">n</th><th scope="col">Median</th><th scope="col">Q1–Q3</th><th scope="col">Range</th></tr></thead>
           <tbody>
@@ -256,9 +259,22 @@
             <tr><th scope="row">Non-users</th><td>3</td><td>6.0</td><td>5–6</td><td>5–6</td></tr>
           </tbody>
         </table>
-        <h3>Mann–Whitney U test</h3>
-        <p>The mean ranks were 10.47 for AI users and 14.17 for non-users. The two-sided Mann–Whitney U test gave U = 17.5 and an asymptotic p-value of .345. At the stated threshold, the sample does not give clear statistical evidence of a difference. The observed median difference was −1 point, with a 95% bootstrap interval of [−2, 1] points. Differences in either direction remain compatible with that interval.</p>
-        <table>
+              <table>
+          <caption>Ranks by AI use</caption>
+          <thead><tr><th scope="col">Group</th><th scope="col">n</th><th scope="col">Mean rank</th><th scope="col">Sum of ranks</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">AI users</th><td>18</td><td>10.47</td><td>188.5</td></tr>
+            <tr><th scope="row">Non-users</th><td>3</td><td>14.17</td><td>42.5</td></tr>
+          </tbody>
+        </table>
+            </div>
+          </div>
+          <div class="panel test-summary">
+            <div>
+              <h3>Mann–Whitney U test</h3>
+              <p>The two-sided Mann–Whitney U test gave U = 17.5 and an asymptotic p-value of .345. At the stated threshold, the sample does not give clear statistical evidence of a difference. The observed median difference was −1 point, with a 95% bootstrap interval of [−2, 1] points. Differences in either direction remain compatible with that interval.</p>
+            </div>
+            <table>
           <caption>Table 2. Main comparison and uncertainty</caption>
           <thead><tr><th scope="col">Statistic</th><th scope="col">Result</th></tr></thead>
           <tbody>
@@ -270,7 +286,8 @@
             <tr><th scope="row">95% bootstrap CI for median difference</th><td>[−2, 1] points</td></tr>
           </tbody>
         </table>
-        </details>
+          </div>
+        </div>
         <div class="sample-layout">
           <h3>Sample</h3>
           <figure class="results-figure sample-figure">
@@ -279,26 +296,118 @@
           </figure>
           <p>Ten respondents reported preparing one or two previous CVs, and eight reported preparing three or more. Three preferred not to answer.</p>
         </div>
+        <section class="questionnaire-findings" id="questionnaire-findings" aria-labelledby="questionnaire-findings-title">
+          <h3 id="questionnaire-findings-title">AI use and perceived help</h3>
+          <p class="reading-width">The main comparison asks how satisfied students were with their CVs. The follow-up questions show what AI users found helpful and what made some students choose to write without it.</p>
+          <div class="result-cards follow-up-cards">
+            <div><span>Overall help (Q14)</span><strong>6 / 7</strong><span>Median rating among 18 AI users</span></div>
+            <div><span>Problematic suggestions (Q15)</span><strong>15 / 18</strong><span>AI users who noticed at least one</span></div>
+          </div>
+          <div class="panel tool-results">
+            <div>
+              <h4>AI tools used for CV preparation</h4>
+              <p>ChatGPT was selected most often (10 of 18 AI users), followed by Doubao (7) and DeepSeek (6).</p>
+              <p class="finding-note">Each respondent could select several tools. The chart counts users who selected each tool, so the totals can exceed 18.</p>
+            </div>
+            <figure class="follow-up-chart">
+              <figcaption>Tools reported by 18 AI users (Q12)</figcaption>
+              <ul class="tool-list" role="list">
+                  <li><span>ChatGPT</span><span class="tool-track" aria-hidden="true"><i style="--count:10"></i></span><strong>10/18</strong></li>
+                  <li><span>Doubao</span><span class="tool-track" aria-hidden="true"><i style="--count:7"></i></span><strong>7/18</strong></li>
+                  <li><span>DeepSeek</span><span class="tool-track" aria-hidden="true"><i style="--count:6"></i></span><strong>6/18</strong></li>
+                  <li><span>Gemini</span><span class="tool-track" aria-hidden="true"><i style="--count:5"></i></span><strong>5/18</strong></li>
+                  <li><span>Kimi</span><span class="tool-track" aria-hidden="true"><i style="--count:3"></i></span><strong>3/18</strong></li>
+                  <li><span>Qwen</span><span class="tool-track" aria-hidden="true"><i style="--count:2"></i></span><strong>2/18</strong></li>
+                  <li><span>Microsoft Copilot</span><span class="tool-track" aria-hidden="true"><i style="--count:1"></i></span><strong>1/18</strong></li>
+              </ul>
+            </figure>
+          </div>
+          <div class="panel function-results">
+            <h4>Which CV tasks did students use AI for?</h4>
+            <p>Drafting or expanding experience descriptions was the most commonly rated task (18 of 18). The median usefulness rating for drafting was 5 out of 7. Structure, wording, grammar and formatting, and translation had a median of 6 among respondents who gave valid ratings.</p>
+            <div class="table-scroll">
+            <table>
+              <caption>AI function use and usefulness (Q13, 18 AI users)</caption>
+              <thead><tr><th scope="col">CV task</th><th scope="col">Use inferred from a rating</th><th scope="col">Median usefulness (1–7)</th><th scope="col">Not used</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Draft or expand experience descriptions</th><td><span class="count-bar" style="--count:18" aria-hidden="true"></span>18/18</td><td>5</td><td>0</td></tr>
+                <tr><th scope="row">Reword or polish the language</th><td><span class="count-bar" style="--count:17" aria-hidden="true"></span>17/18</td><td>6</td><td>1</td></tr>
+                <tr><th scope="row">Tailor the CV to a job or programme</th><td><span class="count-bar" style="--count:16" aria-hidden="true"></span>16/18</td><td>5.5</td><td>2</td></tr>
+                <tr><th scope="row">Organise sections or structure</th><td><span class="count-bar" style="--count:15" aria-hidden="true"></span>15/18</td><td>6</td><td>2</td></tr>
+                <tr><th scope="row">Check grammar, spelling or formatting</th><td><span class="count-bar" style="--count:15" aria-hidden="true"></span>15/18</td><td>6</td><td>3</td></tr>
+                <tr><th scope="row">Translate content</th><td><span class="count-bar" style="--count:15" aria-hidden="true"></span>15/18</td><td>6</td><td>3</td></tr>
+              </tbody>
+            </table>
+            </div>
+            <p class="finding-note">A single rating from 1 to 7 counts as reported use. Medians use valid ratings only. One structure response contained two ratings and was excluded from that row.</p>
+          </div>
+          <div class="panel-grid follow-up-grid">
+            <div class="panel">
+              <h4>Problematic AI suggestions</h4>
+              <figure class="follow-up-chart">
+                <figcaption>Responses from 18 AI users (Q15)</figcaption>
+                <div class="suggestion-bar" aria-hidden="true">
+                  <span class="corrected" style="--count:10">10</span>
+                  <span class="kept" style="--count:5">5</span>
+                  <span class="none" style="--count:2">2</span>
+                  <span class="unsure" style="--count:1">1</span>
+                </div>
+                <ul class="suggestion-key" role="list">
+                  <li><span class="corrected" aria-hidden="true"></span> Corrected or discarded <strong>10</strong></li>
+                  <li><span class="kept" aria-hidden="true"></span> Used as suggested <strong>5</strong></li>
+                  <li><span class="none" aria-hidden="true"></span> Reported no issue <strong>2</strong></li>
+                  <li><span class="unsure" aria-hidden="true"></span> Unsure <strong>1</strong></li>
+                </ul>
+              </figure>
+              <p>Fifteen AI users noticed a problematic suggestion. Five of those users reported keeping it as it was.</p>
+              <p class="finding-note">The median intention to use AI again was 6 out of 7 (Q16).</p>
+            </div>
+            <div class="panel">
+              <h4>Reasons for preparing a CV without AI</h4>
+              <figure class="follow-up-chart">
+                <figcaption>Responses from 3 non-users. Multiple answers allowed (Q10).</figcaption>
+                <ul class="reason-list" role="list">
+                  <li><span>Preferred writing it themselves</span><strong>3/3</strong><span class="reason-track" aria-hidden="true"><i style="--count:3"></i></span></li>
+                  <li><span>Distrusted AI output</span><strong>2/3</strong><span class="reason-track" aria-hidden="true"><i style="--count:2"></i></span></li>
+                  <li><span>Had privacy or data protection concerns</span><strong>2/3</strong><span class="reason-track" aria-hidden="true"><i style="--count:2"></i></span></li>
+                  <li><span>Did not expect AI to improve the CV</span><strong>1/3</strong><span class="reason-track" aria-hidden="true"><i style="--count:1"></i></span></li>
+                </ul>
+              </figure>
+              <p>All three non-users preferred writing the CV themselves.</p>
+              <p class="finding-note">When asked about future use, two were neutral (4 out of 7) and one chose 2 out of 7 (Q11).</p>
+            </div>
+          </div>
+          <p class="reading-width"><strong>What the follow-up answers add.</strong> Students reported help with drafting and editing, and some accepted suggestions they had already recognised as problematic. This supports teaching students how to check generated CV content. The follow-up questions describe each group’s responses. Q8 and Q9 remain the basis for the satisfaction comparison.</p>
+        </section>
         </div>
       </section>
       <section id="discussion">
         <div class="wrap section-inner">
         <h2>Discussion</h2>
-        <p>In this sample, non-users gave somewhat higher ratings, but their group was very small. One response occupies a third of that group and can have a large influence on its median and ranks. The sensible reading is that the survey leaves the direction and size of the difference uncertain. Students in both groups rated their CVs above the neutral point at the median, while the AI users’ answers covered a wider range.</p>
-        <p>There are several ways the observed pattern could arise. Students who expect a difficult application might turn to AI more often and judge the finished CV against a different standard. A student with more experience might choose to work independently and feel more confident about the result. AI use also covered a range of tools and tasks, from editing sentences to generating material. The grouping combines these uses, so the comparison cannot isolate the contribution of any particular tool or feature.</p>
+        <div class="reading-columns discussion-intro">
+          <div><h3>Interpreting the results</h3>
+            <p>In this sample, non-users gave somewhat higher ratings, but their group was very small. One response occupies a third of that group and can have a large influence on its median and ranks. The sensible reading is that the survey leaves the direction and size of the difference uncertain. Students in both groups rated their CVs above the neutral point at the median, while the AI users’ answers covered a wider range.</p>
+          </div>
+          <div><h3>Possible explanations</h3>
+            <p>There are several ways the observed pattern could arise. Students who expect a difficult application might turn to AI more often and judge the finished CV against a different standard. A student with more experience might choose to work independently and feel more confident about the result. Respondents reported using several tools across different CV tasks, from editing sentences to generating material. The grouping combines these uses, so the comparison cannot isolate the contribution of any particular tool or feature.</p>
+          </div>
+        </div>
         <div class="panel-grid">
           <div class="panel"><h3>Limitations</h3>
         <p>Recruitment through student networks means the observed share of AI users describes this sample. It does not estimate AI adoption among all XJTLU students. The sample was smaller than planned and had only three non-users. That limits precision and makes it hard to assess whether the two groups have similarly shaped distributions. The two-sided test gives evidence about the observed ratings under its assumptions, while the small sample limits what can be inferred beyond those ratings.</p>
         <p>We also relied on memory and a single overall rating. Students may remember a recent revision or the role of AI differently, and they may use the scale in different ways. The study did not collect CV quality scores or application decisions, so those outcomes would need separate measures. Students chose whether to use AI, and the study did not control for application goals, prior writing experience or deadlines. Any group difference would therefore remain observational.</p>
           </div>
           <div class="panel"><h3 id="recommendations">Recommendations and future work</h3>
-        <p>For CV guidance, the result supports keeping the focus on what the student has written and can substantiate. A practical activity would be to ask students to check whether an edited bullet accurately represents their role and evidence, and whether the final wording fits the position. The same review can be applied to drafts with or without AI. This is a suggestion for advising, rather than an outcome tested in this survey.</p>
+        <p>For CV guidance, the result supports keeping the focus on what the student has written and can substantiate. A practical activity would be to ask students to check whether an edited bullet accurately represents their role and evidence, and whether the final wording fits the position. The same review can be applied to drafts with or without AI. This suggestion draws on Q15: five AI users reported keeping a suggestion they had noticed was problematic. The survey did not evaluate the effectiveness of a review exercise.</p>
             <p>In a survey of knowledge workers, Lee <em>et al.</em> identified verification as part of the work of using AI outputs <a href="#ref-critical">[13]</a>. In an AI-assisted decision experiment, Buçinca <em>et al.</em> found that prompts to think independently could reduce overreliance <a href="#ref-bucinca">[14]</a>. Amershi <em>et al.</em> also recommend making it easy for users to dismiss or correct AI output <a href="#ref-amershi">[15]</a>. In CV advising, one practical application is to review any suggested achievement, date or figure against the applicant’s own records before keeping it.</p>
         <p>For a follow-up comparison, recruiting more non-users would provide a better basis for estimating differences. A study could also distinguish specific types of assistance, such as language editing and drafting, record the application context, and collect independent ratings of CV quality. A planned comparison of comparable tasks with randomised access to assistance would address a different question about causal effects. Satisfaction and independent quality ratings could then be reported side by side.</p>
           </div>
         </div>
         <h3 id="conclusion">Conclusion</h3>
-        <p class="reading-width">Among the 21 students surveyed, those who did not use AI reported a median CV satisfaction score of 6 out of 7 (n = 3), compared with 5 out of 7 among those who used AI (n = 18). Scores were more varied in the AI group, and both groups gave ratings of 5 and 6. The two-sided Mann–Whitney U test found no statistically significant difference between the groups (U = 17.5, p = .345). The 95% bootstrap confidence interval for the median difference (AI users minus non-users) ranged from −2 to 1 points. With only three non-users, the survey gives a clear description of this sample but leaves the direction and size of any wider difference uncertain.</p>
+        <div class="panel reading-columns conclusion-columns">
+          <p>Among the 21 students surveyed, those who did not use AI reported a median CV satisfaction score of 6 out of 7 (n = 3), compared with 5 out of 7 among those who used AI (n = 18). Scores were more varied in the AI group, and both groups gave ratings of 5 and 6.</p>
+          <p>The two-sided Mann–Whitney U test found no statistically significant difference between the groups (U = 17.5, p = .345). The 95% bootstrap confidence interval for the median difference (AI users minus non-users) ranged from −2 to 1 points. With only three non-users, the survey gives a clear description of this sample but leaves the direction and size of any wider difference uncertain.</p>
+        </div>
         </div>
       </section>
       <section id="references">

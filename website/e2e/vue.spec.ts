@@ -12,7 +12,7 @@ test('results and questionnaire anchors work', async ({ page }) => {
   await expect(page).toHaveURL(/#results$/)
   await expect(page.getByRole('heading', { name: 'Results', exact: true })).toBeInViewport()
   await expect(page.locator('.result-summary')).toContainText('p = .345')
-  await expect(page.getByRole('table', { name: /Main comparison/ })).toBeHidden()
+  await expect(page.getByRole('table', { name: /Main comparison/ })).toBeVisible()
   await page.getByRole('link', { name: 'View questionnaire', exact: true }).click()
   await expect(page).toHaveURL(/#questionnaire$/)
   await expect(page.getByRole('link', { name: 'Open questionnaire on WJX' })).toHaveAttribute(
@@ -34,13 +34,11 @@ test('the report is readable without JavaScript', async ({ browser, baseURL }) =
   const scoreCounts = page.getByRole('table', {
     name: 'Number of respondents by satisfaction score',
   })
-  await expect(scoreCounts).toBeHidden()
-  await page.getByText('View score counts', { exact: true }).click()
   await expect(scoreCounts).toBeVisible()
   await expect(scoreCounts.locator('tbody tr')).toHaveCount(7)
-  await page.getByText('Hide score counts', { exact: true }).click()
-  await expect(scoreCounts).toBeHidden()
-  await page.getByText('Statistical details', { exact: true }).click()
+  await expect(page.getByRole('table', { name: /AI function use and usefulness/ })).toBeVisible()
+  await expect(page.locator('.suggestion-key li')).toHaveCount(4)
+  await expect(page.locator('.reason-list li')).toHaveCount(4)
   await expect(page.getByRole('table', { name: /Main comparison/ })).toBeVisible()
   for (const name of [/Grouped chart/, /median difference/, /Application goals/]) {
     const figure = page.getByRole('img', { name })
